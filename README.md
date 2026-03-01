@@ -1,6 +1,6 @@
 Distributed Machine Learning for High-Value Fare Classification in Large-Scale Urban Mobility Data
 Abstract
-In this project, binary classification is considered, the distributed machine learning is used to make the high-value taxi trip binary classification based on the New York City Yellow Taxi January 2023 data. The Apache Spark 3.5.1 and PySpark MLlib scalable pipeline were used to process millions of transportation records (stored on Parquet formatted files). The AUC, accuracy, and F1-score were used to compare four classification algorithms Logistic Regression, Decision Tree, Random Forest, and Gradient Boosted Trees. The results of the experiment prove that ensemble approaches have higher predictive power and can better represent the nonlinear fare trends. Scalability experiments also indicate the relevance of partition tuning in optimisation of distributed computing.
+In this project, binary classification is considered, the distributed machine learning is used to make the high-value taxi trip binary classification based on the New York City Yellow Taxi January 2023 data. The Apache Spark 3.5.1 and PySpark MLlib scalable pipeline were used to process millions of transportation records (stored on Parquet formatted files). The AUC, accuracy, and F1-score were used to compare four classification algorithms Logistic Regression, Decision Tree, Random Forest, and Gradient Boosted Trees. The results of the experiment prove that ensemble approaches have higher predictive power and can better represent the nonlinear fare trends. Scalability experiments also indicate the relevance of partition tuning in optimisation of distributed computing
 1. Introduction
 The platforms of urban mobility produce huge amounts of structured transactional data on a day to day basis. The analysis of such data is requisite to optimise revenues, surge pricing, detecting frauds, and planning transport policies. When faced with multi-million-record transportation datasets, traditional machine learning systems that are single node in nature are not able to scale.
 The proposed problem in this project will be solved by using distributed classification models in Apache Spark to detect high-value taxi trips. It is a research that concentrates on predictive performance and computational scalability in a big data environment.
@@ -30,6 +30,7 @@ Key Attributes
 The binary variable (highfare) was engineered based on the following rule:
 High fare = fareamount > 30 USD
 Exploratory analysis showed that the class balance was moderate and genders were skewed to the right which can commonly be seen in urban transport system.
+
 5. Methodology
 The suggested scheme includes the following steps:
 ●	Ingestion Distributed Data ingestion with Apache Spark.
